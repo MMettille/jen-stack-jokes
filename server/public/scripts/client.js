@@ -18,6 +18,17 @@ function addAJoke(){
         joke: $( '#questionIn' ).val(),
         punchLine: $( '#punchlineIn' ).val()
     }
+    // post request to send the users input to the server
+    $.ajax({
+        method: 'POST',
+        url: '/new',
+        data: userInputs
+    }).then(function(response){
+        // calling the function getJokes to append to the DOM
+        getJokes();
+    }).catch(function(error){
+        alert('error in addAJoke function')
+    })
 
 }
 // this is where we will get the list of jokes
