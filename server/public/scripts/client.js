@@ -52,6 +52,6 @@ function displayJokes(array){
     //loop through our joke array and append to the DOM
     for (let jokes of array){
         $( '#jokeOutput' ).append(`
-        <li>${jokes.jokeQuestion}   ${jokes.punchLine}   ${jokes.whoseJoke}</li>`)
+        <li><strong>Joke: </strong>${jokes.jokeQuestion} <strong>Punch Line: </strong> ${jokes.punchLine} <strong>Told By: </strong> ${jokes.whoseJoke}</li>`)
     }
 }
