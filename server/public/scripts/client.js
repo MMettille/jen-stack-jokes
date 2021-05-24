@@ -5,8 +5,21 @@ $( document ).ready( onReady );
 function onReady() {
     console.log('DOM ready');
     getJokes();
+    // handle buttons
+    $( '#addJokeButton' ).on('click', addAJoke);
 }
 
+// this is where we will get the joke from the user
+function addAJoke(){
+    console.log('in addAJoke function');
+    // create an object with the things
+    let userInputs = {
+        name: $( '#whoseJokeIn' ).val(),
+        joke: $( '#questionIn' ).val(),
+        punchLine: $( '#punchlineIn' ).val()
+    }
+
+}
 // this is where we will get the list of jokes
 function getJokes(){
     console.log('in getJokes function');
